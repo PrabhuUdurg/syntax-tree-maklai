@@ -1,4 +1,5 @@
 import nltk
+import random
 from nltk import RegexpParser, pos_tag
 
 sentence = open('text.txt', 'r')
@@ -16,3 +17,16 @@ chunker = RegexpParser("""
   """)
 
 output = chunker.parse(tagged)
+
+# Looking for NPs
+nps = []
+for subtree in output.subtrees():
+    if subtree.label() == 'NP':
+        np = ' '.join(word for word, tag in subtree.leaves())
+        nps.append(np)
+
+        
+random.shuffle(nps)
+print(nps)
+
+
