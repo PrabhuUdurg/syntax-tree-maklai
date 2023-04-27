@@ -1,0 +1,16 @@
+
+{% block content %}
+<div class="container" style="text-align: center;">
+    <h1>Write a text</h1>
+
+    <form method="post" action="">
+        {{ form }}
+        {%csrf_token%} 
+        <button type="submit", name="save">Generate</button>
+    </form>
+    <h2>
+        {{ text }}
+    </h2>
+</div>
+{% endblock %}
+
