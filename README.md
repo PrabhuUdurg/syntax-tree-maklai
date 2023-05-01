@@ -1,5 +1,5 @@
-# syntax-tree-maklai
-Technical exercise for python Internship
+# Natural Language Processing tool
+
 
 # To use an application 
 
