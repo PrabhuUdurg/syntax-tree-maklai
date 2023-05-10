@@ -44,7 +44,7 @@ def home(request):
 
             random.shuffle(nps)
 
-            text = nps
+            text = output, nps 
     else:
         form = InputForm()
     return render(request, 'index.html', {'form': form, 'text': text})
